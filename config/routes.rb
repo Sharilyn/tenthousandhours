@@ -1,4 +1,5 @@
 Tenthousandhours::Application.routes.draw do
+  root "home#index"
   resources :skills
 
   # The priority is based upon order of creation: first created -> highest priority.
