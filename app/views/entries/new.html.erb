@@ -1,0 +1,17 @@
+<h1>Add a New Entry</h1>
+
+
+<%= form_for @entry do |f| %>
+
+<fieldset>
+    <%= f.label :user %>
+    <%= f.text_field :user %>
+    <%= f.label :skill_id, "Select a Skill" %>
+    <%= select_tag 'entry[skill_id]',  options_from_collection_for_select(@skills, "id", "name") %>
+    <%= f.label :hours %>
+    <%= f.text_field :hours %>
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+</fieldset>
+    <%= f.submit %>
+    <% end %>

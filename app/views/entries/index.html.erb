@@ -1,0 +1,13 @@
+<h1>Index of Entries</h1>
+
+<ul>
+<% @entries.each do |entry| %>
+    <li><%= @entry.skill.name %><br />
+        <%= @entry.note %><br />
+        <%= @entry.hours %><br />
+        <%= @entry.user.email %>
+    </li>
+<% end %>
+</ul>
+
+<%= link_to "Add an Entry", new_entry_path %>
