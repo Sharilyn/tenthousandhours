@@ -7,6 +7,8 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find params[:id]
+  #rescue ActiveRecord::RecordNotFound
+    #redirect_to new_entry_path
   end
 
   def new
@@ -15,10 +17,10 @@ class EntriesController < ApplicationController
   end
 
   def update
-       # Find the Entry by id
+       # @entry = Entry.find params[:id]
        # Safe_params stuff
        # update entry
-       #redirect to entry
+       #redirect_to @entry
      end
 
   def create

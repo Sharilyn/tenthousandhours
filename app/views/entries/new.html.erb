@@ -1,5 +1,13 @@
 <h1>Add a New Entry</h1>
 
+<% if @entry.errors.any? %>
+  <h2>There were errors saving your entry</h2>
+  <ul>
+    <% @entry.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <%= form_for @entry do |f| %>
 
