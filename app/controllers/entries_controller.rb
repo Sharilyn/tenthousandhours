@@ -24,6 +24,7 @@ class EntriesController < ApplicationController
      end
 
   def create
+    @skills = Skill.all
     @entry = current_user.entries.new safe_entry
     if @entry.save
       flash[:notice] = "You have added a new entry to your skillset"
