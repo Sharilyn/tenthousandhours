@@ -1,12 +1,18 @@
 <h1>Profile Page</h1>
 
-<h3><%= @user.email %></h3>
-<h3><%= @user.username %></h3>
+<h3>Email: <%= @user.email %></h3>
+<% if @user.username? %>
+<h3>Username: <%= @user.username %></h3>
+<% end %>
 
+<h2>Special Skills</h2>
 <ul>
-<% @user.skills.each do |skill| %>
+<% @user.skills.select(:name).distinct.each do |skill| %>
 <li>
 <%= skill.name %>
 </li>
 <% end %>
 </ul>
+
+<p><%= link_to "Add a New Entry", new_entry_path %></p>
+<p><%= link_to "Add a New Skill to the Database", new_skill_path %></p>
