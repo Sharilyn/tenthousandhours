@@ -1,1 +1,12 @@
 <h1>Profile Page</h1>
+
+<h3><%= @user.email %></h3>
+<h3><%= @user.username %></h3>
+
+<ul>
+<% @user.skills.each do |skill| %>
+<li>
+<%= skill.name %>
+</li>
+<% end %>
+</ul>

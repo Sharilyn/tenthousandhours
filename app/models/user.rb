@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-    has_many :skills
+    has_many :skills, through: :entries
     has_many :entries
     
 

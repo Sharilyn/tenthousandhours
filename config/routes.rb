@@ -1,5 +1,6 @@
 Tenthousandhours::Application.routes.draw do
-  resources :entries, :skills
+  resources :entries
+  resources :skills
   resources :profiles
   devise_for :users
   root "home#index"
