@@ -1,10 +1,9 @@
 Tenthousandhours::Application.routes.draw do
-  resources :entries
-
+  resources :entries, :skills
+  resources :profiles
   devise_for :users
   root "home#index"
-  resources :skills
-  resource :profile
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

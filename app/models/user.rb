@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
     has_many :skills
     has_many :entries
+    
 
     attr_accessor :login
   # Include default devise modules. Others available are:

@@ -2,10 +2,12 @@
 
 <ul>
 <% @entries.each do |entry| %>
-    <li><%= entry.skill.name %><br />
+    <li>
+        <%= entry.user.email %><br />
+        Skill: <%= entry.skill.name %><br />
         <%= entry.note %><br />
-        <%= entry.hours %><br />
-        <%= entry.user.email %>
+        Hours: <%= entry.hours %>
+        
     </li>
 <% end %>
 </ul>
