@@ -11,3 +11,30 @@
  *= require_self
  *= require_tree .
  */
+
+/* font-family: 'Titillium Web', sans-serif; */
+
+@import url(https://fonts.googleapis.com/css?family=Sanchez:400italic,400);
+@import url(https://fonts.googleapis.com/css?family=Abel|Titillium+Web:400,300italic,700,600italic);
+
+ body {
+    background-color: #DCAFFA;
+}
+
+h1, h2 {
+    font-family: 'Sanchez', serif;
+}
+
+h3, p, li {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  
+}
+
+a {
+  font-family: 'Abel', sans-serif;
+}
+
+.nav {
+  width: 100%;
+}
