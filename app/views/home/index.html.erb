@@ -1,15 +1,13 @@
 
 <p>get the skills to pay your bills</p>
 
-<h1>The Skills</h1>
-
-<ul>
-<% @skills.each do |skill| %>
-    <li><%= link_to skill.name, skill %></li>
+<% if user_signed_in? %>
+  <div><p><%= link_to "Add a New Entry", new_entry_path %></p></div>
+<% else %>
+  <div><p><%= link_to "Sign in to Add an Entry", new_user_session_path %></p></div>
 <% end %>
-</ul>
+<div><p><%= link_to "See All Skills", skills_path %></div>
 
-<%= link_to "Add a Skill", new_skill_path %>
 
 <h1>Here's what other people are learning</h1>
 <ul>
