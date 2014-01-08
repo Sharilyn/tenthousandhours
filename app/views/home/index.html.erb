@@ -10,3 +10,16 @@
 </ul>
 
 <%= link_to "Add a Skill", new_skill_path %>
+
+<h1>Here's what other people are learning</h1>
+<ul>
+<% @entries.each do |entry| %>
+  <li><%= entry.user.email %><br />
+  <%= entry.skill.name %>  hours: <%= entry.hours%><br />
+    <%= entry.note %> 
+    <hr>
+    </li>
+<% end %>
+</ul>
+
+    

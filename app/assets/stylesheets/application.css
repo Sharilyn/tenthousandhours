@@ -36,5 +36,20 @@ a {
 }
 
 .nav {
-  width: 100%;
+  width: 95%;
+  border: 1px solid black;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.first {
+  float: left;
+  width: 400px;
+}
+
+.second {
+  float: right;
+  overflow: hidden;
+  padding-top: 25px;
+  padding-right: 10px;
 }
