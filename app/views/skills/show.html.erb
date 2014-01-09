@@ -1,2 +1,12 @@
 <h1><%= @skill.name %></h1>
 <h2><%= @skill.description %></h2>
+
+<ul>
+<% @skill.entries.each do |entry| %>
+<li>
+<p><%= entry.user.email %><br />
+hours: <%= entry.hours %><br />
+<%= entry.note %></p>
+</li>
+<% end %>
+</ul>

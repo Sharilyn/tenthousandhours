@@ -7,9 +7,10 @@ before_action :authenticate_user!, only: [:new, :create]
 
     def show
         @skill = Skill.find params[:id]
-    rescue ActiveRecord::RecordNotFound
-        flash[:alert] = "We don't have that skill in our system"
-        redirect_to root_path
+        @entries = Entry.all
+    #rescue ActiveRecord::RecordNotFound
+        #flash[:alert] = "We don't have that skill in our system"
+        #redirect_to root_path
     end
 
     def new

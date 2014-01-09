@@ -1,4 +1,4 @@
-<h1><%= @entry.skill.name %></h1>
+<h1><%= link_to @entry.skill.name, skill_path(:id => @entry.skill_id) %></h1>
 <h2><%= @entry.note %></h2>
 <h3><%= @entry.hours %></h3>
 <h3><%= @entry.user.email %></h3>
