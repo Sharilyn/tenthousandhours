@@ -10,10 +10,14 @@
 <% @user.skills.select(:name).distinct.each do |skill| %>
 <!-- @user.skills.distinct.pluck(:name).each -->
 <li>
-<%= skill.name %>
+<p><%= skill.name %></p>
+<p>total hours: <%= skill.entries.sum(:hours) %></p>
 </li>
 <% end %>
 </ul>
 
 <p><%= link_to "Add a New Entry", new_entry_path %></p>
 <p><%= link_to "Add a New Skill to the Database", new_skill_path %></p>
+
+<!-- for doing sum of hours
+ @cart.items.joins(:product).sum("products.price") -->
