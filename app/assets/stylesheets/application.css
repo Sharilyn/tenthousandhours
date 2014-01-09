@@ -21,8 +21,20 @@
     background-color: #DCAFFA;
 }
 
+#page_container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 h1, h2 {
     font-family: 'Sanchez', serif;
+}
+
+.logotype a {
+  font-family: 'Sanchez', serif;
+  font-size: 30px;
+  text-decoration: none !important;
+  color: black;
 }
 
 h3, p, li {
@@ -36,7 +48,7 @@ a {
 }
 
 .nav {
-  width: 98%;
+  width: 100%;
   border: 1px solid black;
   overflow: hidden;
   padding: 10px;
@@ -44,12 +56,11 @@ a {
 
 .first {
   float: left;
-  width: 400px;
+  width: 350px;
+  padding-top: 20px;  
 }
 
 .middle {
-  float: left;
-  width: 200px;
   padding-top: 35px;
 }
 
