@@ -1,6 +1,10 @@
 <h1><%= link_to @entry.skill.name, skill_path(:id => @entry.skill_id) %></h1>
 <h2><%= @entry.note %></h2>
 <h3><%= @entry.hours %></h3>
+<% if @entry.user.username? %>
+<h3><%= @entry.user.username %></h3>
+<% else %>
 <h3><%= @entry.user.email %></h3>
+<% end %>
 
 <%= link_to "Home Page", root_path %>
