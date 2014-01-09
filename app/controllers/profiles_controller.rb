@@ -5,7 +5,6 @@ class ProfilesController < ApplicationController
         @skills = Skill.all
         @user = User.find params[:id]
         @skill = Skill.find params[:id]
-        @entries = Entry.all
     end
 
     def index
