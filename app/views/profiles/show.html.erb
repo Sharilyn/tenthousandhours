@@ -8,6 +8,7 @@
 <h2>Special Skills</h2>
 <ul>
 <% @user.skills.select(:name).distinct.each do |skill| %>
+<!-- @user.skills.distinct.pluck(:name).each -->
 <li>
 <%= skill.name %>
 </li>
