@@ -1,11 +1,15 @@
-<h1>Add a New Skill</h1>
+<h1>Add a New Skill to our Database</h1>
 
 <%= form_for @skill do |f| %>
 <fieldset>
+<legend>New Skill</legend>
+    <div class="form">
     <%= f.label :name %>
     <%= f.text_field :name %>
+    </div><div class="form">
     <%= f.label :description %>
     <%= f.text_area :description %>
+    </div>
 </fieldset>
-    <%= f.submit %>
+    <%= f.submit 'Add this Skill', :class => 'superbutton' %>
     <% end %>
