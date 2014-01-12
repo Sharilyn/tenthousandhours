@@ -34,7 +34,7 @@ h1, h2 {
   font-family: 'Sanchez', serif;
   font-size: 30px;
   text-decoration: none !important;
-  color: black;
+  color: white;
 }
 
 h3, p, li {
@@ -52,6 +52,18 @@ a {
   border: 1px solid black;
   overflow: hidden;
   padding: 10px;
+  background-image: url(chessmatch_purple.jpg);
+  color: white;
+}
+
+.nav a {
+  text-decoration: none !important;
+  color: white;
+}
+
+.translucent {
+  opacity: 0.4;
+  filter: alpha(opacity = 40);
 }
 
 .first {
@@ -70,3 +82,20 @@ a {
   padding-top: 25px;
   padding-right: 10px;
 }
+
+.center {
+  font-weight: 700;
+  text-align: center;
+  padding: 5px;
+}
+
+.button {
+  max-width: 150px;
+  padding: 15px;
+  border-radius: 15px;
+  text-decoration: none !important;
+  text-align: center;
+  font-weight: 700;
+  background-color: white;
+}
+
