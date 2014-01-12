@@ -1,0 +1,27 @@
+<% if @entry.errors.any? %>
+  <h2>There were errors editing your entry</h2>
+  <ul>
+    <% @entry.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<p></p>
+
+<%= form_for @entry do |f| %>
+
+<fieldset>
+<legend>Edit your Entry</legend>
+    <div class="form">
+    <%= f.label :skill_id, "Select a Skill" %>
+    <%= f.collection_select :skill_id, @skills, :id, :name %>
+    </div><div class="form">
+    <%= f.label :hours %>
+    <%= f.text_field :hours %>
+    </div><div class="form">
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+    </div>
+</fieldset>
+    <%= f.submit 'Update my Hours', :class => 'superbutton' %>
+    <% end %>

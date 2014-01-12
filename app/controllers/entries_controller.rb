@@ -17,11 +17,16 @@ class EntriesController < ApplicationController
   end
 
   def update
-       # @entry = Entry.find params[:id]
-       # Safe_params stuff
-       # update entry
-       #redirect_to @entry
+      @skills = Skill.all
+      @entry = Entry.find params[:id]
+      @entry.update safe_entry
+      redirect_to @entry
      end
+
+  def edit
+    @entry = Entry.find params[:id]
+    @skills = Skill.all
+  end
 
   def create
     @skills = Skill.all
