@@ -5,7 +5,8 @@
 <h1>Here's what other people are learning</h1>
 <ul>
 <% @entries.each do |entry| %>
-  <li><%= entry.user.email %><br />
+  <li><%= entry.user.email %> 
+  <%= link_to "Profile", profile_path(:id => entry.user) %><br />
   <%= entry.skill.name %>  hours: <%= entry.hours%><br />
     <%= entry.note %> 
     <hr>
