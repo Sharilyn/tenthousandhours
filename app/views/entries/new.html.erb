@@ -1,4 +1,4 @@
-<h1>Add a New Entry</h1>
+<h1>Add Hours To Your Cumulative Skill</h1>
 
 <% if @entry.errors.any? %>
   <h2>There were errors saving your entry</h2>
@@ -12,12 +12,17 @@
 <%= form_for @entry do |f| %>
 
 <fieldset>
+<legend>New Entry</legend>
+    <div class="form">
     <%= f.label :skill_id, "Select a Skill" %>
     <%= f.collection_select :skill_id, @skills, :id, :name %>
+    </div><div class="form">
     <%= f.label :hours %>
     <%= f.text_field :hours %>
+    </div><div class="form">
     <%= f.label :note %>
     <%= f.text_area :note %>
+    </div>
 </fieldset>
-    <%= f.submit %>
+    <%= f.submit 'Add my Hours', :class => 'superbutton' %>
     <% end %>

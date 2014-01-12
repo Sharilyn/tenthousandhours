@@ -1,13 +1,6 @@
 
 <p class="center">get the skills to pay your bills</p>
 
-<% if user_signed_in? %>
-  <div class="button"><%= link_to "Add a New Entry", new_entry_path %></div>
-<% else %>
-  <div><p><%= link_to "Sign in to Add an Entry", new_user_session_path %> || <%= link_to "See All Skills", skills_path %></p></div>
-<% end %>
-
-
 
 <h1>Here's what other people are learning</h1>
 <ul>
@@ -20,4 +13,8 @@
 <% end %>
 </ul>
 
-    
+<% if user_signed_in? %>
+  <div class="button"><%= link_to "Add a New Entry", new_entry_path %></div>
+<% else %>
+  <div><p><%= link_to "Sign in to Add an Entry", new_user_session_path %> || <%= link_to "See All Skills", skills_path %></p></div>
+<% end %>

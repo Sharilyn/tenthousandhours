@@ -99,3 +99,30 @@ a {
   background-color: white;
 }
 
+.superbutton {
+  max-width: 150px;
+  padding: 15px;
+  border-radius: 15px;
+  text-decoration: none !important;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: white;
+  margin-left: 425px;
+}
+
+fieldset {
+  padding: 1em;
+  font-family: sans-serif;
+  }
+fieldset .form {
+  padding: 5px;
+  margin-left: 100px;
+}
+label {
+  width:25%;
+  margin-right: 0.5em;
+  padding-top: 0.2em;
+  font-weight:bold;
+  }
+
