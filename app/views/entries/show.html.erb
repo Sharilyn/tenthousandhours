@@ -1,10 +1,11 @@
 <h1><%= link_to @entry.skill.name, skill_path(:id => @entry.skill_id) %></h1>
-<h2><%= @entry.note %></h2>
-<h3><%= @entry.hours %></h3>
+<h2><%= @entry.hours %> hours</h2>
+<h3><%= @entry.note %></h3>
 <% if @entry.user.username? %>
-<h3><%= @entry.user.username %></h3>
+<h3><%= link_to @entry.user.username, profile_path(:id => @entry.user) %></h3>
 <% else %>
-<h3><%= @entry.user.email %></h3>
+<h3><%= link_to @entry.user.email, profile_path(:id => @entry.user) %></h3>
 <% end %>
 
-<%= link_to "Home Page", root_path %>
+<div class="button"><%= link_to "Add Another Entry", new_entry_path %></div>
+<p>Or, return to <%= link_to "Home Page", root_path %></p>
