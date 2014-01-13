@@ -5,8 +5,12 @@
 <h1>Here's what other people are learning</h1>
 <ul>
 <% @entries.each do |entry| %>
-  <li><%= entry.user.email %> 
-  <%= link_to "Profile", profile_path(:id => entry.user) %><br />
+  <li> 
+  <% if entry.user == current_user %> 
+  <%= entry.user.email %>
+  <% else %>
+  <%= link_to entry.user.email, profile_path(:id => entry.user) %>
+  <% end %><br />
   <%= entry.skill.name %>  hours: <%= entry.hours%><br />
     <%= entry.note %> 
     <hr>
