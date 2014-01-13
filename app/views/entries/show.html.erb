@@ -6,6 +6,10 @@
 <% else %>
 <h3><%= link_to @entry.user.email, profile_path(:id => @entry.user) %></h3>
 <% end %>
+<% if @entry.user == current_user %>
+<p><%= link_to "Edit this Entry", edit_entry_path %></p>
+<% else %>
+<% end %>
 
 <div class="button"><%= link_to "Add Another Entry", new_entry_path %></div>
 <p>Or, return to <%= link_to "Home Page", root_path %></p>
