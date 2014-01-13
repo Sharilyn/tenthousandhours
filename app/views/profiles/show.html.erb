@@ -10,7 +10,7 @@
 <!-- @user.skills.distinct.pluck(:name).each -->
 <ul>
 <li>
-<p><%= skill.name %></p>
+<p><%= link_to skill.name, skill_path(:id => skill) %></p>
 <p>total hours: <%= skill.entries.sum(:hours) %></p>
 
 <% if (skill.entries.sum(:hours) >= 100) %>
