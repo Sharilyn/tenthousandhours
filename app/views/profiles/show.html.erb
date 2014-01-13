@@ -10,15 +10,29 @@
 <!-- @user.skills.distinct.pluck(:name).each -->
 <ul>
 <li>
-<p><%= link_to skill.name, skill_path(:id => skill) %></p>
-<p>total hours: <%= skill.entries.sum(:hours) %></p>
+<p class="prettybig"><%= link_to skill.name, skill_path(:id => skill) %>
+<span class="secondspan">total hours: <%= skill.entries.sum(:hours) %></span></p>
 
 <% if (skill.entries.sum(:hours) >= 100) %>
-<div class="award">You have earned the rank of JOURNEYMAN! for <%= skill.name %></div>
+    <% if @user == current_user %>
+    <div class="award">You have earned the rank of JOURNEYMAN! for <%= skill.name %></div>
+    <% else %>
+    <div class="award"><%= @user.username %> has earned the rank of JOURNEYMAN! for <%= skill.name %></div>
+    <% end %>
+
 <% elsif (skill.entries.sum(:hours) >= 50)%>
-<div class="award">You have earned the rank of BEGINNER'S MIND! for <%= skill.name %></div>
+    <% if @user == current_user %>
+    <div class="award">You have earned the rank of BEGINNER'S MIND! for <%= skill.name %></div>
+    <% else %>
+    <div class="award"><%= @user.username %> has earned the rank of BEGINNER'S MIND! for <%= skill.name %></div>
+    <% end %>
+
 <% elsif (skill.entries.sum(:hours) >= 10)%>
-<div class="award">You have earned the rank of NOVICE! for <%= skill.name %></div>
+    <% if @user == current_user %>
+    <div class="award">You have earned the rank of NOVICE! for <%= skill.name %></div>
+    <% else %>
+    <div class="award"><%= @user.username %> has earned the rank of NOVICE! for <%= skill.name %></div>
+    <% end %>
 <% else %>
 <% end %>
 </li>

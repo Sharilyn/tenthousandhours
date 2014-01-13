@@ -123,8 +123,26 @@ a {
   padding: 15px;
   max-width: 500px;
   border-radius: 10px;
-  background-color: black;
+  background-color: #CCCCCC;
   color: white;
+}
+
+.tiny {
+  font-size: 70%;
+}
+
+.prettybig {
+  font-size: 120%;
+  padding: 10px;
+  background-color: #CB9EE9;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.secondspan {
+  float: right;
+  overflow: hidden;
+  padding-right: 10px;
 }
 
 fieldset {

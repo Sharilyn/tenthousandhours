@@ -2,7 +2,7 @@
 <% @entries.each do |entry| %>
   <li> 
   <% if entry.user == current_user %> 
-  <%= entry.user.email %>
+  <%= entry.user.email %> <span class="tiny"><%= link_to "your profile", profile_path(:id => entry.user) %></span>
   <% else %>
   <%= link_to entry.user.email, profile_path(:id => entry.user) %>
   <% end %><br />
