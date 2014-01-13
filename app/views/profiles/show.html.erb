@@ -14,18 +14,18 @@
 <p>total hours: <%= skill.entries.sum(:hours) %></p>
 
 <% if (skill.entries.sum(:hours) >= 100) %>
-<p>You have earned the rank of JOURNEYMAN! for <%= skill.name %></p>
+<div class="award">You have earned the rank of JOURNEYMAN! for <%= skill.name %></div>
 <% elsif (skill.entries.sum(:hours) >= 50)%>
-<p>You have earned the rank of BEGINNER'S MIND! for <%= skill.name %></p>
+<div class="award">You have earned the rank of BEGINNER'S MIND! for <%= skill.name %></div>
 <% elsif (skill.entries.sum(:hours) >= 10)%>
-<p>You have earned the rank of NOVICE! for <%= skill.name %></p>
+<div class="award">You have earned the rank of NOVICE! for <%= skill.name %></div>
 <% else %>
 <% end %>
 </li>
 </ul>
 <% end %>
-<p><%= link_to "Add a New Entry", new_entry_path %></p>
-<p><%= link_to "Add a New Skill to the Database", new_skill_path %></p>
+<div class="button"><%= link_to "Add a New Entry", new_entry_path %></div>
+<p>Or, you can <%= link_to "Add a New Skill to the Database", new_skill_path %></p>
 
 <!-- for doing sum of hours
  @cart.items.joins(:product).sum("products.price") -->
