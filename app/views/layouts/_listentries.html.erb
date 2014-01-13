@@ -2,9 +2,9 @@
 <% @entries.each do |entry| %>
   <li> 
   <% if entry.user == current_user %> 
-  <%= entry.user.email %> <span class="tiny"><%= link_to "your profile", profile_path(:id => entry.user) %></span>
+  <%= entry.user.username %> <span class="tiny"><%= link_to "your profile", profile_path(:id => entry.user) %></span>
   <% else %>
-  <%= link_to entry.user.email, profile_path(:id => entry.user) %>
+  <%= link_to entry.user.username, profile_path(:id => entry.user) %>
   <% end %><br />
   <%= link_to entry.skill.name, skill_path(:id => entry.skill) %>  <i>hours: <%= entry.hours %></i><br />
     <%= link_to entry.note, entry_path(:id => entry) %> 
