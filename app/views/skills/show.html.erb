@@ -3,14 +3,22 @@
 
 <ul>
 <% @skill.entries.each do |entry| %>
-<li>
-<p><%= entry.user.email %><br />
-hours: <%= entry.hours %><br />
-<%= entry.note %></p>
-</li>
+<li> 
+  <% if entry.user == current_user %> 
+  <%= entry.user.username %> <span class="tiny"><%= link_to "your profile", profile_path(:id => entry.user) %></span>
+  <% else %>
+  <%= link_to entry.user.username, profile_path(:id => entry.user) %>
+  <% end %><br />
+  <%= link_to entry.skill.name, skill_path(:id => entry.skill) %>  <i>hours: <%= entry.hours %></i><br />
+    <%= link_to entry.note, entry_path(:id => entry) %> 
+    <hr>
+    </li>
 <% end %>
 </ul>
 
-<div>
-<p><%= link_to "Add A Skill to the Database", new_skill_path %> || <%= link_to "See all Skills", skills_path %></p>
-</div>
+
+<div class="button">
+<%= link_to "Add A Skill to the Database", new_skill_path %></div>
+
+<p><%= link_to "See all Skills", skills_path %> || <%= link_to "Home Page", root_path %></p>
+
