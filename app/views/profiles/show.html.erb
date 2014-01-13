@@ -6,16 +6,20 @@
 <% end %>
 
 <h2>Special Skills</h2>
-<ul>
 <% @user.skills.uniq.each do |skill| %>
 <!-- @user.skills.distinct.pluck(:name).each -->
+<ul>
 <li>
 <p><%= skill.name %></p>
 <p>total hours: <%= skill.entries.sum(:hours) %></p>
-</li>
-<% end %>
-</ul>
 
+<% if (skill.entries.sum(:hours) >= 10) %>
+<p>You have earned the rank of NOVICE! for <%= skill.name %></p>
+<% else %>
+<% end %>
+</li>
+</ul>
+<% end %>
 <p><%= link_to "Add a New Entry", new_entry_path %></p>
 <p><%= link_to "Add a New Skill to the Database", new_skill_path %></p>
 
