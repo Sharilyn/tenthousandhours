@@ -1,15 +1,3 @@
 <h1>Index of Entries</h1>
 
-<ul>
-<% @entries.each do |entry| %>
-    <li>
-        <%= entry.user.email %><br />
-        Skill: <%= entry.skill.name %><br />
-        <%= entry.note %><br />
-        Hours: <%= entry.hours %>
-        
-    </li>
-<% end %>
-</ul>
-
-<%= link_to "Add an Entry", new_entry_path %>
+<%= render "layouts/listentries" %>
