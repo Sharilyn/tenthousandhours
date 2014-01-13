@@ -116,7 +116,7 @@ a {
   font-size: 14px;
   font-weight: 700;
   background-color: white;
-  margin-left: 425px;
+  margin-left: 325px;
 }
 
 .award {
@@ -128,8 +128,10 @@ a {
 }
 
 fieldset {
+  max-width: 700px;
   padding: 1em;
-  font-family: sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
   }
 fieldset .form {
   padding: 5px;
