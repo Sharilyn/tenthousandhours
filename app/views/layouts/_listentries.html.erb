@@ -6,7 +6,7 @@
   <% else %>
   <%= link_to entry.user.email, profile_path(:id => entry.user) %>
   <% end %><br />
-  <%= entry.skill.name %>  hours: <%= entry.hours %><br />
+  <%= link_to entry.skill.name, skill_path(:id => entry.skill) %>  <i>hours: <%= entry.hours %></i><br />
     <%= entry.note %> 
     <hr>
     </li>
