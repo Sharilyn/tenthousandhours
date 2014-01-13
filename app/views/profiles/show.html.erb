@@ -2,7 +2,7 @@
 
 <h3>Email: <%= @user.email %></h3>
 <% if @user.username? %>
-<h3>Username: <%= @user.username %></h3>
+<h3>Username: <b><%= @user.username %></b></h3>
 <% end %>
 
 <h2>Special Skills</h2>
@@ -13,7 +13,11 @@
 <p><%= skill.name %></p>
 <p>total hours: <%= skill.entries.sum(:hours) %></p>
 
-<% if (skill.entries.sum(:hours) >= 10) %>
+<% if (skill.entries.sum(:hours) >= 100) %>
+<p>You have earned the rank of JOURNEYMAN! for <%= skill.name %></p>
+<% elsif (skill.entries.sum(:hours) >= 50)%>
+<p>You have earned the rank of BEGINNER'S MIND! for <%= skill.name %></p>
+<% elsif (skill.entries.sum(:hours) >= 10)%>
 <p>You have earned the rank of NOVICE! for <%= skill.name %></p>
 <% else %>
 <% end %>
