@@ -15,23 +15,23 @@
 
 <% if (skill.entries.sum(:hours) >= 100) %>
     <% if @user == current_user %>
-    <div class="award">You have earned the rank of JOURNEYMAN! for <%= skill.name %></div>
+    <div class="award">You have earned the rank of<br /> JOURNEYMAN! <br />for <%= skill.name %></div>
     <% else %>
-    <div class="award"><%= @user.username %> has earned the rank of JOURNEYMAN! for <%= skill.name %></div>
+    <div class="award"><%= @user.username %> has earned the rank of<br /> JOURNEYMAN! <br />for <%= skill.name %></div>
     <% end %>
 
 <% elsif (skill.entries.sum(:hours) >= 50)%>
     <% if @user == current_user %>
-    <div class="award">You have earned the rank of BEGINNER'S MIND! for <%= skill.name %></div>
+    <div class="award">You have earned the rank of<br /> BEGINNER'S MIND! <br />for <%= skill.name %></div>
     <% else %>
-    <div class="award"><%= @user.username %> has earned the rank of BEGINNER'S MIND! for <%= skill.name %></div>
+    <div class="award"><%= @user.username %> has earned the rank of<br /> BEGINNER'S MIND! <br />for <%= skill.name %></div>
     <% end %>
 
 <% elsif (skill.entries.sum(:hours) >= 10)%>
     <% if @user == current_user %>
-    <div class="award">You have earned the rank of NOVICE! for <%= skill.name %></div>
+    <div class="award">You have earned the rank of<br /> NOVICE! <br />for <%= skill.name %></div>
     <% else %>
-    <div class="award"><%= @user.username %> has earned the rank of NOVICE! for <%= skill.name %></div>
+    <div class="award"><%= @user.username %> has earned the rank of<br /> NOVICE! <br />for <%= skill.name %></div>
     <% end %>
 <% else %>
 <% end %>

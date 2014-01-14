@@ -18,7 +18,7 @@
 @import url(https://fonts.googleapis.com/css?family=Abel|Titillium+Web:400,300italic,700,600italic);
 
  body {
-    background-color: #DCAFFA;
+    background-color: #EDCFFC;
 }
 
 #page_container {
@@ -46,7 +46,7 @@ hr {
   font-family: 'Sanchez', serif;
   font-size: 30px;
   text-decoration: none !important;
-  color: #CB9EE9 !important;
+  color: white !important;
 }
 
 h3, p, li {
@@ -129,8 +129,9 @@ a {
   padding: 15px;
   max-width: 500px;
   border-radius: 10px;
-  background-color: #CCCCCC;
+  background-color: #666666;
   color: white;
+  text-align: center;
 }
 
 .tiny {
